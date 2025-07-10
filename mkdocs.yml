@@ -2,7 +2,7 @@ site_name: WoW Learning
 site_description: Learning resources for learning data analytics and visualizations.
 site_author: Sreenath
 site_url: https://wheelocity.github.io/wow_learning/
-
+use_directory_urls: false
 theme:
   name: material
   features:
