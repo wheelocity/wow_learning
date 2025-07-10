@@ -18,23 +18,44 @@ We can also run Python scripts inside Power BI. There are several other features
 
 ## Familiarizing with the UI
 
+
+### Ribbon
 ![Ribbon](images/ribbon.png){: align=left }
+
+### View Selections
 
 ![View Selection](images/view_selection.png){: align=left }
 
+### Report View
+
 ![Report View](images/report_view.png){: align=left }
+
+### Table View
 
 ![Table View](images/table_view.png){: align=left }
 
+### Model View
+
 ![Model View](images/model_view.png){: align=left }
+
+### DAX Query View
 
 ![Dax Query View](images/dax_query_view.png){: align=left }
 
+### TMDL View
+
 ![TMDL View](images/tmdl_view.png){: align=left }
+
+
+### Filter Pane
 
 ![Filter Pane](images/filters_pane.png){: align=left }
 
+### Visuzliazations Pane
+
 ![Visualizations Pane](images/visualizations_pane.png){: align=left }
+
+### Data Pane
 
 ![Data Pane](images/data_pane.png){: align=left }
 
