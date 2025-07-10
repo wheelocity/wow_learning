@@ -1,3 +1,3 @@
-# Introduction
+# Session 1 | Introduction
 
 Power BI Intro contents here...
