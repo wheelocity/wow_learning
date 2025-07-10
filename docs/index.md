@@ -9,10 +9,10 @@ You will find session notes, pre-read contents, step-by-step tutorials, and othe
 - **Power BI Basics** – Navigating the interface and understanding key components  
 - **Schema Design** – Structuring data models for clarity and performance  
 - **Connecting to Data Sources** – Importing data from:  
-  - CSV and Excel files  
-  - JSON and XML files  
-  - SQL Databases  
-  - Google Sheets and other cloud sources  
+  * CSV and Excel files  
+  * JSON and XML files  
+  * SQL Databases  
+  * Google Sheets and other cloud sources  
 - **Data Modeling** – Building relationships, managing tables, and creating star schemas  
 - **DAX Fundamentals** – Writing calculated columns, measures, and using key functions  
 - **Data Visualization** – Creating effective reports and dashboards  
@@ -21,3 +21,4 @@ You will find session notes, pre-read contents, step-by-step tutorials, and othe
 
 
 Hope you will find it useful and enjoy the learning process...
+
