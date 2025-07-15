@@ -21,7 +21,7 @@ A collection of tables is not a dataset. It is just a collection of tables. A da
 
 DAX will be used extensively in the process of dataset creation for adding calculated columns, creating calculated tables, authoring measures, composing queries for API fetches etc...
 
-!!! note "DAX Vs Excel Formulas"
+??? note "DAX Vs Excel Formulas"
 
     Though it is a programming language, it is mostly just functions (like excel formulas) and in some cases, we can use variables etc.. For people familiar with Excel or any other spreadsheets, learning DAX will be very easy. But there is one important difference here. Excel formulas work at a cell level. But DAX works at a column level. There is no concept of previous row or next row. 
 
