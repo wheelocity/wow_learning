@@ -59,3 +59,45 @@ When we write DAX code, we will be using table names and column names to perform
 - If the table name does not have multiple words, we can skip the single quotes and use `Table[Column]`.
 - If we are writing a DAX formula on the current table, we can skip the table name and use the column name only. **DO NOT DO IT** though. Reading the code becomes difficult later on.
 - The square brackets around the column names should always be used.
+
+## Calculated Columns
+
+- These are **columns** added to the tables using DAX
+- The values in the column will be computed row by row.
+- The column **`Product[Price]`** means:
+    - The value of the `Price` column
+    - In the `Product` table.
+    - For the current row.
+    - Different for each row.
+
+## Calculated Columns and Measures
+
+- Suppose our `Sales` table have 1000 rows.
+- In each row, there is a `Sales[SalesAmount]` column and `Sales[ProductCost]` column.
+- Suppose we want to find the `Gross Margin %` of all sales (1000 rows)
+- We can add a **Calculated Column** in the `Sales` table to compute the `Gross Margin` for each row as `Gross Margin = Sales[SalesAmount] - Sales[ProductCost]`. This can be computed for each row. **THIS IS OKAY**.
+- But if would be **WRONG** to add a calculated column as `Gross Margin % = Sales[Gross Margin] / Sales[SalesAmount]` and then sum it up. It won't give the `Gross Margin %` of total sales obviously.
+- In this case, we need measures.
+    - `TotalSalesAmount = SUMX(Sales,Sales[SalesAmount])`
+    - `TotalGrossMargin = SUMX(Sales,Sales[GrossMargin])`
+    - `Gross Margin % = [TotalGrossMargin] / [TotalSalesAmount]`
+Now the `Gross Margin %` will be correct. 
+
+The reason is $\sum_{rows=1}^{1000}  \frac{Margin}{Sales} \ne \frac{\sum Margin}{\sum Sales}$
+
+## Measures
+
+- Written using DAX
+- Do not work row by row
+- Instead, use tables and aggregators
+- Do not have the «current row» concept
+- Examples
+    - `GrossMargin` is a **calculated column** but can be a **measure** too
+    - `GrossMargin %` needs to be a **measure**
+
+## Calculated Columns Vs Measures
+
+- **Calculated Columns** belongs to a **TABLE**. So we always use table name along with the column name as `TableName[ColumnName]`
+- **Measures** DO NOT belong to a **TABLE**. We can move a measure from one table to another. It will be listed under a table only for organization or grouping purpose. When we refer to a measure, avoid using the table name and just refer to it using the measure name in square brackets as `[MeasureName]`
+- **Calculated Columns** are computed at the time of report refresh or data load. It occupies storage and once it is computed at report refresh time, it does not respond to what we select in filters or slicers. The values don't change.
+- **Measures** are not stored in the tables and does not occupy any space. It consumes CPU power. When we use measures in our visualizations, depending on the slicers or filters we choose, the values of measures change dynamically based on the **FILTER CONTEXT** and **EVALUATION CONTEXT**.
