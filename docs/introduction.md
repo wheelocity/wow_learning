@@ -9,7 +9,7 @@ This image shows the flow of data in the context of Power BI. Behind every Power
 
 A collection of tables is not a dataset. It is just a collection of tables. A dataset can be described as a well connected (through relationships) set of tables with additional augmented or custom columns, new derived tables from the source tables, measures, security roles and permissions and so on. The acronym **BI** in Power BI refers to Business Intelligence. These datasets are powering the **Business Intelligence**. 
 
-!!! info "Measures"
+??? info "Measures"
 
     **Measure** is the techinical term used in DAX language that refers to formulas that compute results in real-time (not precomputed and stored) and the same measure or the formula will give different results depending on what filters or slicers we select in the report or how we filter data in a Power Pivot.
 
