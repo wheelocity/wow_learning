@@ -46,3 +46,23 @@ Let's get started. The first step is to install the Power BI Desktop software. T
 For most people who use Intel CPUs, the `x64` version will be the compatible version. 
 
 [Download Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=58494){ .md-button }
+
+## Additional Software Requirements
+
+To learn Power BI, you only need "Power BI Desktop" software. As you progress and when you want to build real usable reports, you will be fetching data from other sources like **MySQL** database, **Microsoft Fabric Lakehouses**, etc... and you will need few more applications that help you do this effortlessly. These are listed below.
+
+??? note "MySQL Workbench"
+
+    This will be required to connect to our `user_app`, `flow` and `groot` databases and write queries and test them locally. This will also help in querying and exporting data as `CSV` files that you can import into Power BI to build reports or use in Excel or Google Sheets to perform ad-hoc analysis.
+
+    [Download MySQL Workbench](https://dev.mysql.com/downloads/workbench/){ .md-button }
+
+??? note "SQL Server Management Studio (SSMS)"
+
+    This will be required to connect to our lakehouses and datawarehouses at Microsoft Fabric and write queries and test them locally. This will also help in querying and exporting data as `CSV` files that you can import into Power BI to build reports or use in Excel or Google Sheets to perform ad-hoc analysis.
+
+    Though we can run queries directly in Power BI service using a web browser, there is a limitation that the browser can fetch only up to 10,000 rows. Installing **SSMS** is necessary to fetch unlimited amount of rows.
+
+    You can download it from the following webpage. 
+
+    [Download SQL Server Management Studio](https://learn.microsoft.com/en-us/ssms/install/install){ .md-button }
