@@ -1,63 +1,48 @@
 # Introduction
 
+## Power BI Datasets
+
+
+![Ribbon](images/powerbi_dataflow.png){: align=left }
+
+This image shows the flow of data in the context of Power BI. Behind every Power BI Dashboard, there is an underlying **dataset**. The data from various sources is imported into this **dataset** as tables. This is the first step. We can import data from hundreds of various datasources and there are connectors available to do this. We don't have to know all of them and instead we use them on need basis depending on our scenario and data source.
+
+A collection of tables is not a dataset. It is just a collection of tables. A dataset can be described as a well connected (through relationships) set of tables with additional augmented or custom columns, new derived tables from the source tables, measures, security roles and permissions and so on. The acronym **BI** in Power BI refers to Business Intelligence. These datasets are powering the **Business Intelligence**. 
+
+!!! info "Measures"
+
+    **Measure** is the techinical term used in DAX language that refers to formulas that compute results in real-time (not precomputed and stored) and the same measure or the formula will give different results depending on what filters or slicers we select in the report or how we filter data in a Power Pivot.
+
+    It is "One Formula - Dynamic results based on the context"
+
+### DAX
+
+**DAX**, which stands for **D**ata **A**nalysis e**X**pressions, is the programming language of Microsoft Power BI, Microsoft Analysis Services, and Microsoft Power Pivot for Excel.
+
+DAX will be used extensively in the process of dataset creation for adding calculated columns, creating calculated tables, authoring measures, composing queries for API fetches etc...
+
+!!! note "DAX Vs Excel Formulas"
+
+    Though it is a programming language, it is mostly just functions (like excel formulas) and in some cases, we can use variables etc.. For people familiar with Excel or any other spreadsheets, learning DAX will be very easy. But there is one important difference here. Excel formulas work at a cell level. But DAX works at a column level. There is no concept of previous row or next row. 
+
+
+
 ## Power BI Desktop
 
-Power BI Desktop is the software that is used to do the following:
+A **dataset** can be created either using a **Power BI Desktop** software or directly on **Power BI Service** (The powerbi.microsoft.com portal). 
 
-- Import data as tables.
-- Build relationships between the tables.
-- Add custom columns to tables
-- Write measures (A measure is like a computed result that is not stored permanently)
-- Create roles and row-level security on tables.
-- Create data visualisations.
-- Publish datasets and reports to Power BI Service (the website for others to use)
-
-There are several prebuilt visualization components like tables, charts etc.. in Power BI Desktop. In case we need new visualizations, we can import visualizations from local files or from Power BI store into Power BI Desktop and  we can use that in our reports.
-
-We can also run Python scripts inside Power BI. There are several other features like embedding Power Apps in Power BI reports and so on.. But at a beginner level, we will stick on these basic tasks.
-
-## Familiarizing with the UI
+Through these tutorial sessions, we will be using **Power BI Desktop** software to create datasets and build reports.
 
 
-### Ribbon
-![Ribbon](images/ribbon.png){: align=left }
+!!! info "Reports Vs Dashboards"
 
-### View Selections
+    There is a distinct difference between the terms **Reports** and **Dashboards** in the context of Power BI. Each report can have only one underlying dataset. A user can create a blank **Dashboard** and pin or populate this dashboard with visuals from many **Reports**. We will see more when we use them.
 
-![View Selection](images/view_selection.png){: align=left }
+Let's get started. The first step is to install the Power BI Desktop software. The link is given below. There will be two installation files. Choose the one that is compatible with your computer's CPU. There are two files available.
 
-### Report View
+- PBIDesktopSetup.exe
+- PBIDesktopSetup_x64.exe
 
-![Report View](images/report_view.png){: align=left }
+For most people who use Intel CPUs, the `x64` version will be the compatible version. 
 
-### Table View
-
-![Table View](images/table_view.png){: align=left }
-
-### Model View
-
-![Model View](images/model_view.png){: align=left }
-
-### DAX Query View
-
-![Dax Query View](images/dax_query_view.png){: align=left }
-
-### TMDL View
-
-![TMDL View](images/tmdl_view.png){: align=left }
-
-
-### Filter Pane
-
-![Filter Pane](images/filters_pane.png){: align=left }
-
-### Visuzliazations Pane
-
-![Visualizations Pane](images/visualizations_pane.png){: align=left }
-
-### Data Pane
-
-![Data Pane](images/data_pane.png){: align=left }
-
-
-
+[Download Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=58494){ .md-button }
