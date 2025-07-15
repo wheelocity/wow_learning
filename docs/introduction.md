@@ -34,7 +34,7 @@ A **dataset** can be created either using a **Power BI Desktop** software or dir
 Through these tutorial sessions, we will be using **Power BI Desktop** software to create datasets and build reports.
 
 
-!!! info "Reports Vs Dashboards"
+??? info "Reports Vs Dashboards"
 
     There is a distinct difference between the terms **Reports** and **Dashboards** in the context of Power BI. Each report can have only one underlying dataset. A user can create a blank **Dashboard** and pin or populate this dashboard with visuals from many **Reports**. We will see more when we use them.
 
@@ -66,3 +66,4 @@ To learn Power BI, you only need "Power BI Desktop" software. As you progress an
     You can download it from the following webpage. 
 
     [Download SQL Server Management Studio](https://learn.microsoft.com/en-us/ssms/install/install){ .md-button }
+
