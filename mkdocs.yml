@@ -34,7 +34,6 @@ nav:
   - Home: index.md
   - Introduction: introduction.md
   - The DAX Language : dax.md
-  - Lab 1 : lab1.md
   
 
 plugins:
