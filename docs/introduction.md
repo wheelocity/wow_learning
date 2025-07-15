@@ -67,3 +67,9 @@ To learn Power BI, you only need "Power BI Desktop" software. As you progress an
 
     [Download SQL Server Management Studio](https://learn.microsoft.com/en-us/ssms/install/install){ .md-button }
 
+??? note "PuTTY"
+
+    PuTTY is an SSH and telnet client. This is needed to connect to the `flow` MySQL database.
+
+    [Download PuTTY](https://www.putty.org/){ .md-button }
+
