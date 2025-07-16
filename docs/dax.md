@@ -505,7 +505,7 @@ Customer[Amount] = 12345.678
 Follows relationships and returns the value of a column.
 
 ```dax title="Date Functions"
-bf_ops_user_roster['RosterStatus'] = related(bf_ops_roster['Status'])
+bf_ops_user_roster['RosterStatus'] = RELATED(bf_ops_roster['Status'])
 ```
 If there is a relationship between user roster and roster, this fetches the roster status from `bf_ops_roster` into `bf_ops_user_roster`. This function is written in the table on many-side of the relationship to get the data from one-side. That is for each row, there can be only one row in the relation target.
 
