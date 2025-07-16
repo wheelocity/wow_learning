@@ -24,6 +24,4 @@ The data for this excercise is available in the following link:
 11. Save and Publish
 12. View the report on Power BI Service.
 
-Please download the Excel file given in the following link and we will be using it for this exercise.
-
 
