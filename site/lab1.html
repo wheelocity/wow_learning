@@ -426,12 +426,15 @@ The goal is to discover how to create calculated columns, measures and how to le
 <li>Load the tables.</li>
 <li>Build relationship between tables.</li>
 <li>Set the filter directions correctly in relationships.</li>
-<li>Add any custom tables if required.</li>
-<li>Add any custom columns to the tables if requied.</li>
-<li>Build some measures using DAX.</li>
-<li>Develop the visualizations.</li>
-<li>Save and Publish</li>
-<li>View the report on Power BI Service.</li>
+<li>Select <code>Enter Data</code> from the ribbon and give it a name called <code>_measures</code></li>
+<li>Add a <strong>Calculated Column</strong> to the <code>sales</code> table named <code>SalesAmount</code> with values as product of quantity and rate.</li>
+<li>Create a <strong>Measure</strong> named <code>TotalSalesAmount</code> by summing up the <code>SalesAmount</code> column of <code>sales</code> table.</li>
+<li>Delete the <code>SalesAmount</code> column from <code>sales</code> table.</li>
+<li>Fix the error on the <code>TotalSalesAmount</code> measure. Can you fix this error without adding a column to <code>sales</code> table?</li>
+<li>Create a <strong>Measure</strong> named <code>SalesSKUCount</code> that shows the distinct count of SKUs in <code>Sales</code> Table.</li>
+<li>Create a <strong>Measure</strong> named <code>CatalogueSKUCount</code> that shows the distinct count of SKUs in <code>products</code> Table.</li>
+<li>Add a <strong>Calculated Column</strong> named <code>TransactionCount</code> to product master</li>
+<li>Add a <strong>Calculated Column</strong> named <code>SalesValue</code> to product master</li>
 </ol>
 
 

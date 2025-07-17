@@ -527,7 +527,7 @@ For each sales header, there will be multiple rows (one row for each SKU in the 
 
 ## Table Functions
 
-We have seen that functions like `SUM`, `SUMX`, `IF`, `SWITCH`, `DATE` etc... that takes a table as input and gives a result which is a single value. But there are other functions called **Table Function** that takes table as input and the output of the function will be table instead of a single value. These table functions are often used in other functions.
+We have seen that functions like `SUM`, `SUMX`, `IF`, `SWITCH`, `DATE` etc... that takes a table as input gives a result which is a single value. These are called **scalar functions**. But there are other functions called **Table Function** that takes table as input and the output of the function will be table instead of a single value. These table functions are often used in other functions.
 
 Some examples of table functions are :
 
