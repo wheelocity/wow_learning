@@ -1431,7 +1431,7 @@ If there is a relationship between user roster and roster, this fetches the rost
 </ul>
 </div>
 <h2 id="table-functions">Table Functions</h2>
-<p>We have seen that functions like <code>SUM</code>, <code>SUMX</code>, <code>IF</code>, <code>SWITCH</code>, <code>DATE</code> etc... that takes a table as input gives a result which is a single value. These are called <strong>scalar functions</strong>. But there are other functions called <strong>Table Function</strong> that takes table as input and the output of the function will be table instead of a single value. These table functions are often used in other functions.</p>
+<p>We have seen that functions like <code>SUM</code>, <code>SUMX</code>, <code>IF</code>, <code>SWITCH</code>, <code>DATE</code> etc... that takes a table as input gives a result which is a single value. These are called <strong>scalar functions</strong>. But there are other functions called <strong>Table Functions</strong> that takes table as input and the output of the function will be table instead of a single value. These table functions are often used in other functions.</p>
 <p>Some examples of table functions are :</p>
 <ul>
 <li><code>FILTER</code></li>
@@ -1457,7 +1457,7 @@ If there is a relationship between user roster and roster, this fetches the rost
 </span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">        </span><span class="na">Sales[InvoiceValue]</span>
 </span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">    </span><span class="p">)</span>
 </span></code></pre></div>
-<p>In this case, Instead of <code>Sales</code>, we are inputing <code>FILTER(Sales,Sales[Category]="FMCG")</code> to SUMX. The result of <code>FILTER</code> is not a single value. It is an other table that is computed by filtering the <code>Sales</code> table based on the filter criteria. We can add as many filter conditions as we want using logical operators.</p>
+<p>In this case, Instead of <code>Sales</code>, we are inputing <code>FILTER(Sales,Sales[Category]="FMCG")</code> to SUMX. The result of <code>FILTER</code> is not a single value. It is another table that is computed by filtering the <code>Sales</code> table based on the filter criteria. We can add as many filter conditions as we want using logical operators.</p>
 <div class="language-dax highlight"><span class="filename">SUMX with FILTER</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>TrichyFMCGSalesAmount = 
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="nf">SUMX</span><span class="p">(</span>
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">        </span><span class="nf">FILTER</span><span class="p">(</span>
@@ -1468,6 +1468,7 @@ If there is a relationship between user roster and roster, this fetches the rost
 </span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">        </span><span class="na">sales[quantity]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="na">sales[rate]</span>
 </span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">    </span><span class="p">)</span>
 </span></code></pre></div>
+<p>Here it is not necessary that the <code>Category</code> and <code>District</code> columns to exist in <code>Sales</code> table. Those can exist in the dimension tables like <code>Products</code> and <code>Terminals</code>. With right kind of relationships, we can leverage those relations to filter the <code>Sales</code> table.</p>
 
 
 
