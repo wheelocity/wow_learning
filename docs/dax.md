@@ -525,5 +525,53 @@ For each sales header, there will be multiple rows (one row for each SKU in the 
     - **Scalar Functions**: Functions that return a single value. Like `SUMX`, `MAX`, `RELATED` etc...
     - **Table Functions**: Functions that return a table. Like `ALL`, `FILTER`, `RELATEDTABLE` etc...
 
+## Table Functions
 
+We have seen that functions like `SUM`, `SUMX`, `IF`, `SWITCH`, `DATE` etc... that takes a table as input and gives a result which is a single value. But there are other functions called **Table Function** that takes table as input and the output of the function will be table instead of a single value. These table functions are often used in other functions.
+
+Some examples of table functions are :
+
+- `FILTER`
+- `ALL`
+- `VALUES`
+- `DISTINCT`
+- `RELATEDTABLE`
+
+These functions can be combined to form complex expressions.
+
+```dax title="SUMX without FILTER"
+SalesAmount = 
+    SUMX(
+        Sales,
+        Sales[InvoiceValue]
+    )
+```
+
+This totals the `InvoiceValue` column of the `Sales` table and gives the total sales value. Now, instead of passing the `Sales` table, we can filter the table and pass the filtered table to `SUMX`.
+
+```dax title="SUMX with FILTER"
+FMCGSalesAmount = 
+    SUMX(
+        FILTER(
+            Sales,
+            Sales[Category]="FMCG"
+        ),
+        Sales[InvoiceValue]
+    )
+```
+
+In this case, Instead of `Sales`, we are inputing `FILTER(Sales,Sales[Category]="FMCG")` to SUMX. The result of `FILTER` is not a single value. It is an other table that is computed by filtering the `Sales` table based on the filter criteria. We can add as many filter conditions as we want using logical operators.
+
+
+```dax title="SUMX with FILTER"
+TrichyFMCGSalesAmount = 
+    SUMX(
+        FILTER(
+            sales,
+            RELATED(products[category])="FMCG" &&
+            RELATED(terminals[district])="Trichy"
+        ),
+        sales[quantity] * sales[rate]
+    )
+```
 

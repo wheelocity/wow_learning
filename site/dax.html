@@ -1396,7 +1396,7 @@ Here it is evaluated only once. Better and faster.</p>
 <h2 id="relational-functions">Relational Functions</h2>
 <h3 id="related"><code>RELATED</code></h3>
 <p>Follows relationships and returns the value of a column.</p>
-<p><div class="language-dax highlight"><span class="filename">Date Functions</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>bf_ops_user_roster[&#39;RosterStatus&#39;] = related(bf_ops_roster[&#39;Status&#39;])
+<p><div class="language-dax highlight"><span class="filename">Date Functions</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>bf_ops_user_roster[&#39;RosterStatus&#39;] = RELATED(bf_ops_roster[&#39;Status&#39;])
 </span></code></pre></div>
 If there is a relationship between user roster and roster, this fetches the roster status from <code>bf_ops_roster</code> into <code>bf_ops_user_roster</code>. This function is written in the table on many-side of the relationship to get the data from one-side. That is for each row, there can be only one row in the relation target.</p>
 <h3 id="related_table"><code>RELATED_TABLE</code></h3>

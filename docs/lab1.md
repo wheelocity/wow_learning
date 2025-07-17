@@ -17,11 +17,15 @@ The data for this excercise is available in the following link:
 4. Load the tables.
 5. Build relationship between tables.
 6. Set the filter directions correctly in relationships.
-7. Add any custom tables if required.
-8. Add any custom columns to the tables if requied.
-9. Build some measures using DAX.
-10. Develop the visualizations.
-11. Save and Publish
-12. View the report on Power BI Service.
+7. Select `Enter Data` from the ribbon and give it a name called `_measures`
+8. Add a **Calculated Column** to the `sales` table named `SalesAmount` with values as product of quantity and rate.
+9. Create a **Measure** named `TotalSalesAmount` by summing up the `SalesAmount` column of `sales` table.
+10. Delete the `SalesAmount` column from `sales` table.
+11. Fix the error on the `TotalSalesAmount` measure. Can you fix this error without adding a column to `sales` table?
+10. Create a **Measure** named `SalesSKUCount` that shows the distinct count of SKUs in `Sales` Table.
+11. Create a **Measure** named `CatalogueSKUCount` that shows the distinct count of SKUs in `products` Table.
+12. Add a **Calculated Column** named `TransactionCount` to product master
+13. Add a **Calculated Column** named `SalesValue` to product master
+
 
 
